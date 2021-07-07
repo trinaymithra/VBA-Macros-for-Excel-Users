@@ -1,0 +1,21 @@
+Option Explicit
+
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+   Target.Calculate
+End Sub
+
+
+NOTE:
+
+Before enabling this macro, few other rules have to be enabled.
+
+I'll explain how
+* Select whole sheet by clicking on bottom triangle left to 'A'and above '1' (Headings)
+* Home on Ribbon -> Conditional Formatting -> New rule -> 'Use a formula to determine which cell to format'
+* Paste '=OR(CELL("row")=CELL("row",A1))' in formula field
+* Customize the format(Select your color, border etc. from the menu)
+* Click 'OK'
+* Now paste the above macro in the VBA Editor
+* Alt+Q to exit the VBA editor
+
+Now you can see the row being highlighted on selecting any cell from that row
