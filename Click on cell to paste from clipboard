@@ -1,0 +1,6 @@
+Sub Worksheet_SelectionChange(ByVal Target As Range)
+ActiveSheet.Paste Destination:=Target
+End Sub
+
+# Use this macro when you have to paste content from the clipboard to multiple cells. Save your little finger from holding onto ctrl while you select all the cells with your mouse.
+# Enable this macro and just click on the cell to see that clipboard content is pasted into the cell
